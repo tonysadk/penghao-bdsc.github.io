@@ -1,0 +1,1308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--<link rel="icon" href="favicon.ico">-->
+
+    <title>Hao Peng, Ph.D.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/homepage.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        hr{
+                height: 1px;
+                background-color:grey;
+            }
+        img {
+                width: 100%;
+                max-height: 60px;
+                PADDING-RIGHT:5px;
+                PADDING-LEFT:5px;
+            }
+    .imgTab {
+                width: 12%;    
+            }
+    .pubTab {
+                width: 82%;    
+            }
+    .abTab {
+                width: 6%;    
+            }
+    .authorInfo {
+                color: black; 
+            }
+    .venueInfo{
+            }
+    </style>
+
+    <script language="JavaScript">
+        var allTypes = new Array('machine-learning', 'data-mining')
+        function showAllPublication() {
+            $(".publication").show("slow");
+        }
+        function showContentWithType(typeName) {
+            $(".publication").hide("slow");
+            $("." + typeName).show("slow");
+        }
+    </script>
+
+
+  </head>
+
+  <body>
+
+
+    <!-- ===========   Navigation =============== -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Hao Peng, Ph.D. </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Publication</a></li>
+            <li><a href="people.html">Students</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+            <li><a href="service.html">Service</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <!-- ===========   Main Container =============== -->
+    <div class="container w">
+        <div class="row centered">
+            <!-- <h3>PUBLICATIONS</h3> -->
+            <!--  =========== Filters ==================================  -->
+            <div class="panel panel-default">
+                <!-- *************************************************************************** -->
+                <div class="panel-heading">
+                    <ul class="nav nav-pills" role="tablist">
+                    <h4>Filters:</h4>
+                        <li role="presentation" class="dropdown active">
+                         <a class="dropdown-toggle" onclick="javascript:showAllPublication();" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="true">All 
+                        <span class="badge">33</span></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="https://scholar.google.com/citations?hl=en&user=R25rbyQAAAAJ">Google Scholar (citations)</a></li>
+                            <li><a href="https://dblp.uni-trier.de/pers/hd/p/Peng:Hao">DBLP</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  onclick="javascript:showContentWithType('2017'); javascript:showAllPublication();"  aria-haspopup="true" aria-expanded="true">By Year<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+        <li><a href="javascript:showContentWithType('2020');">2020 <span class="badge">8</span></a></li><li><a href="javascript:showContentWithType('2019');">2019 <span class="badge">9</span></a></li><li><a href="javascript:showContentWithType('2018');">2018 <span class="badge">4</span></a></li><li><a href="javascript:showContentWithType('2017');">2017 <span class="badge">8</span></a></li><li><a href="javascript:showContentWithType('2016');">2016 <span class="badge">2</span></a></li><li><a href="javascript:showContentWithType('2015');">2015 <span class="badge">2</span></a></li><li>                          
+                          </ul>
+                        </li>
+
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="javascript:showContentWithType('conference');"  role="button" aria-haspopup="true" aria-expanded="true">By Type  <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="javascript:showContentWithType('journal');"> Journal <span class="badge">12</span></a></li>
+                            <li><a href="javascript:showContentWithType('conference');"> Conference <span class="badge">11</span></a></li>
+                            <li><a href="javascript:showContentWithType('patent');">Patent <span class="badge">10</span></a></li>
+                          </ul>
+                        </li>
+
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="javascript:showContentWithType('conference');"  role="button" aria-haspopup="true" aria-expanded="true">By Conference  <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="javascript:showContentWithType('PAKDD');">PAKDD <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('AAAI');">AAAI <span class="badge">2</span></a></li>
+                            <li><a href="javascript:showContentWithType('SIGIR');">SIGIR <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('IJCNN');">IJCNN <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('CIKM');">CIKM <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('IJCAI');">IJCAI <span class="badge">3</span></a></li>
+                            <li><a href="javascript:showContentWithType('WWW');">WWW <span class="badge">1</span></a></li>
+							<li><a href="javascript:showContentWithType('WISE');">WISE <span class="badge">1</span></a></li>
+                        
+                            
+                            
+                          </ul>
+                        </li>
+
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="javascript:showContentWithType('journal');"  role="button" aria-haspopup="true" aria-expanded="true">By Journal <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="javascript:showContentWithType('IS');">IS <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('TKDE');">TKDE <span class="badge">2</span></a></li>
+                            <li><a href="javascript:showContentWithType('DSPR');">DEPR <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('FCS');">FCS <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('SCIS');">SCIS <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('TITS');">TITS <span class="badge">1</span></a></li>
+                            <li><a href="javascript:showContentWithType('FGCS');">FGCS <span class="badge">2</span></a></li>
+                            <li><a href="javascript:showContentWithType('CC');">CC <span class="badge">1</span></a></li>
+							<li><a href="javascript:showContentWithType('NC');">NC <span class="badge">1</span></a></li>
+							<li><a href="javascript:showContentWithType('KBS');">KBS <span class="badge">1</span></a></li>
+                            
+                          </ul>
+                        </li>
+                        <!--li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="javascript:showAllPublication();"  role="button" aria-haspopup="true" aria-expanded="true">By Coauthor<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            
+                            
+                            <li><a href="javascript:showContentWithType('philip');">Philip S. Yu <span class="badge">48</span></a></li>
+                            
+                            
+                            <li><a href="javascript:showContentWithType('xinyue');">Xinyue Liu <span class="badge">15</span></a></li>
+                            
+                            
+                          </ul>
+                        </li-->
+
+                    </ul>
+                </div>
+                <!-- *************************************************************************** -->
+                <div class="panel-body">
+                    <!--  ===================================================  -->
+                    <h3>2020</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2020 IS me hongfei bowen Md hongyuan jianwei lihong zeyu linfeng senzhang philip">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[IS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/is20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/is20.pdf">Spatial Temporal Incidence Dynamic Graph Neural Networks for Traffic Flow Forecasting</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+                                                Hongfei Wang,
+                                                Bowen Du,
+                                                Md Zakirul Alam Bhuiyan,
+												Hongyuan Ma, 
+												Jianwei Liu, 
+												Lihong Wang, 
+												Zeyu Yang, 
+												Linfeng Du, 
+												Senzhang Wang, 
+												Philip S. Yu
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> Information Sciences (IS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2020 PAKDD yuwei me philip ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAKDD]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/pakdd20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/pakdd20.pdf">Multi-Information Source HIN for Medical Concept Embedding</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Yuwei Cao,
+                                                <u>Hao Peng</u>,
+                                                Philip S. Yu
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> Pacific Asia Knowledge Discovery and Data Mining  (PAKDD)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2020 AAAI me jianxin qiran yuanxing senzhang lifang">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[AAAI]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/aaai20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/aaai20.pdf">Motif-matching based Subgraph-level Attentional Convolutional Network for Graph Classiﬁcation</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+                                                Jianxin Li,
+                                                Qiran Gong,
+                                                Yuanxing Ning,
+                                                Senzhang Wang,
+												Lifang He 
+                       
+                                                </span><br> 
+                                                <span class="venueInfo">  Association for the Advancement of Artificial Intelligence (AAAI)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2020 TKDE yali xiaoyong me binxing philip ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[TKDE]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/tkde20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/tkde20.pdf">HinCTI: A Cyber Threat Intelligence Modeling and Identiﬁcation System Based on Heterogeneous Information Network</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Yali Gao,
+												Xiaoyong Li,
+                                                <u>Hao Peng</u>,
+                                                Binxing Fang,
+                                                Philip S. Yu                                              
+                                                </span><br> 
+                                                <span class="venueInfo">  IEEE Transactions on Knowledge and Data Engineering (TKDE)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2020 DSPR me lin liya weiqin hongyuan yuntao ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[DSPR]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/dspr20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/dspr20.pdf">Approximate Error Estimation based Incremental Word Representation Learning</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Lin Liu,
+												Liya Ma,
+												Weiqin Zhao,
+												Hongyuan Ma,
+												Yuntao Long
+                                                </span><br> 
+                                                <span class="venueInfo"> Data Science and Pattern Recognition (DSPR)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+						<!---------------------------------------->
+                        <li class="list-group-item conference publication 2020 SIGIR zhiwei yingtong yutong me philip ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[SIGIR]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/sigir20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/sigir20.pdf">Alleviating the Inconsistency Problem of Applying Graph Neural Network to Fraud Detection </a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Zhiwei Liu,  
+												Yingtong Dou,
+												Yutong Deng,
+												<u>Hao Peng</u>,
+												Philip S. Yu
+                                                </span><br> 
+                                                <span class="venueInfo"> ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                         <!---------------------------------------->
+                         <!---------------------------------------->
+                        <li class="list-group-item journal publication 2020 NC zhilong weifeng yabin zhipu me bowen ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[NC]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/nc20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/nc20.pdf">LSTM variants meet graph neural networks for road speed prediction </a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Zhilong Lu,
+												Weifeng Lv,
+												Yabin Cao,
+												Zhipu Xie,
+												<u>HaoPenga</u>,
+												Bowen Du
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> Neurocomputing (NC)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>	
+						 <!---------------------------------------->
+						 <!---------------------------------------->
+                        <li class="list-group-item journal publication 2020 KBS chen xutan shanghang me philip min linfeng lihong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[KBS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/kbs20.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/kbs20.pdf">Modeling relation paths for knowledge base completion via joint adversarial training</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Chen Li, 
+												Xutan Peng, 
+												Shanghang Zhang, 
+												<u>Hao Peng</u>, 
+												Philip S. Yu, 
+												Min He, 
+												Linfeng Du, 
+												Lihong Wang
+                                              
+                                                </span><br> 
+                                                <span class="venueInfo"> Knowledge-Based Systems (KBS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						 <!---------------------------------------->
+						  <!---------------------------------------->
+                    </ul>
+					  <!---------------------------------------->
+					    <!---------------------------------------->
+                    <h3>2019</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2019 IJCNN mengjiao jianxin jian me xudong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[IJCNN]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/ijcnn19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/ijcnn19.pdf">Learning Semantic Coherence for Machine Generated Spam Text Detection</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Mengjiao Bao,
+												Jianxin Li,
+												Jian Zhang,
+												<u>Hao Peng</u>,
+												Xudong Liu 
+                                             
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> International Joint Conference on Neural Networks (IJCNN)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2019 TKDE me jianxin senzhang lihong qiran renyu bo lifang philip ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[TKDE]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/tkde19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/tkde19.pdf">Hierarchical Taxonomy-Aware and Attentional Graph Capsule RCNNs for Large-Scale Multi-Label Text Classiﬁcation</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												<u>Hao Peng</u>, 
+												Jianxin Li, 
+												Senzhang Wang, 
+												Lihong Wang, 
+												Qiran Gong, 
+												Renyu Yang, 
+												Bo Li, 
+												Lifang He,
+												Philip S. Yu
+
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> IEEE Transactions on Knowledge and Data Engineering (TKDE)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2019 CIKM yu yangqiu jianxin cheng jian me ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[CIKM]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/cikm19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/cikm19.pdf">Hetespaceywalk: a heterogeneous spacey random walk for heterogeneous information network embedding</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Yu He,
+												Yangqiu Song,
+												Jianxin Li,
+												Cheng Ji,
+												Jian Peng,
+												<u>Hao Peng</u>
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> ACM International Conference on Information and Knowledge Management (CIKM)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2019 IJCAI me jianxin qiran yangqiu yuanxing kunfeng philip">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[IJCAI]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/ijcai19a.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/ijcai19a.pdf">Fine-grained Event Categorization with Heterogeneous Graph Convolutional Networks</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Jianxin Li,
+												Qiran Gong,
+												Yangqiu Song,
+												Yuanxing Ning,
+												Kunfeng Lai,
+												Philip S.Yu, 
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> International Joint Conference on Artiﬁcial Intelligence (IJCAI)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2019 FCS yaopeng me jianxin yangqiu xiong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[FCS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/fcs19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/fcs19.pdf">Event detection and evolution in multi-lingual social streams</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Yaopeng Liu, 
+												<u>Hao Peng</u>, 
+												Jianxin Li,
+												Yangqiu Song, 
+												Xiong Li 
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> Frontiers of Computer Science (FCS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2019 SCIS me jianxin hao qiran senzhang lin lihong xiang ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[SCIS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/scis19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/scis19.pdf">Dynamic Network Embedding via Incremental Skip-gram with Negative Sampling</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Jianxin Li,
+												Hao Yan,
+												Qiran Gong, 
+												Senzhang Wang, 
+												Lin Liu, 
+												Lihong Wang,
+												Xiang Ren
+
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> SCIENCE CHINA Information Sciences (SCIS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2019 TITS bowen me senzhang md lihong qiran lin jing">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[TITS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/tits19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/tits19.pdf">Deep Irregular Convolutional Residual LSTM for Urban Trafﬁc Passenger Flows Prediction</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>, 
+												Bowen Du, 
+												Senzhang Wang, 
+												Md Zakirul Alam Bhuiyan, 
+												Lihong Wang, 
+												Qiran Gong, 
+												Lin Liu,
+												Jing Li
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> Transactions on Intelligent Transportation Systems (TITS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item conference publication 2019 WISE hao me chen jianxin lihong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[WISE]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/wise19.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/wise19.pdf">Bibliographic Name Disambiguation with Graph Convolutional Network </a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Hao Yan, 
+												<u>Hao Peng</u>, 
+												Chen Li, 
+												Jianxin Li,
+												Lihong Wang
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> International Conference on Web Information Systems Engineering (WISE)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2019 IJCAI qianren jianxin senzhang yuanning me ming ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[IJCAI]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/ijcai19b.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/ijcai19b.pdf">Aspect-Based Sentiment Classiﬁcation with Attentive Neural Turing Machines </a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Qianren Mao,
+												Jianxin Li,
+												Senzhang Wang,
+												Yuanning Zhang,
+												<u>Hao Peng</u>,
+												Min He,
+										
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> International Joint Conference on Artiﬁcial Intelligence (IJCAI)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <!---------------------------------------->
+                        <!---------------------------------------->
+                      </ul>
+                 <!---------------------------------------->
+				 <!---------------------------------------->
+                        <h3>2018</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2018 IJCAI yu jianxin yangqiu mutian me ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[IJCAI]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/ijcai18.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/ijcai18.pdf">Time-evolving Text Classiﬁcation with Deep Neural Networks</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Yu He, 
+												Jianxin Li, 
+												Yangqiu Song, 
+												Mutian He,
+												<u>Hao Peng</u>
+											
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> International Joint Conference on Artiﬁcial Intelligence (IJCAI)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						 <!---------------------------------------->
+                        <li class="list-group-item conference publication 2018 WWW me jianxin yu yaopeng mengjiao lihong yangqiu qiang ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[WWW]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/www18.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/www18.pdf">Large-Scale Hierarchical Text Classification with Recursively Regularized DeepGraph-CNN</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Jianxin Li,
+												Yu He,
+												Yaopeng Liu,
+												Mengjiao Bao,
+												Lihong Wang, 
+												Yangqiu Song,
+												Qiang Yang
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> World Wide Web Conference (WWW)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						 <!---------------------------------------->
+                        <li class="list-group-item journal publication 2018 FGCS me mengjiao jianxin md yaopeng yu erica ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[FGCS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/fgcs18a.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/fgcs18a.pdf">Incremental term representation learning for social network analysis</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Mengjiao Bao,
+												Jianxin Li,
+												Md Zakirul Alam Bhuiyan,
+												Yaopeng Liu, 
+												Yu He,
+												Erica Yang 
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> Future Generation Computer Systems  (FGCS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						 <!---------------------------------------->
+                        <li class="list-group-item journal publication 2018 FGCS jianxin me erica chunming shenghai lihong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[FGCS]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/fgcs18b.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/fgcs18b.pdf">Eagle+:A fast incremental approach to automaton and table online updates for cloud services</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Jianxin Li,
+												<u>Hao Peng</u>,
+												Erica Yang,
+												Chunming Hua,
+												Shenghai Zhong,
+												Lihong Wang
+											
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> IEEE Transactions on Knowledge and Data Engineering (FGCS)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+					  </ul>
+						<!---------------------------------------->
+						<!---------------------------------------->
+						 <h3>2017</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item conference publication 2017 AAAI me jianxin yangqiu yaopeng ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[AAAI]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/aaai17.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/aaai17.pdf">Incrementally Learning the Hierarchical Softmax Function for Neural Language Models</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>,
+												Jianxin Li,
+												Yangqiu Song,
+												Yaopeng Liu
+	                                   
+                                                </span><br> 
+                                                <span class="venueInfo"> AAAI Conference on Artificial Intelligence (AAAI)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent jianxin jun chen me richong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17a.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17a.pdf">User portrait construction method and device</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Jianxin Li,
+												Jun Li,
+												Chen Li,
+												<u>Hao Peng</u>,
+												Richong Zhang
+								
+	                                   
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent jianxin jun chen me richong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17b.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17b.pdf">Multi-granularity real-time hot spot aggregation method</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Jianxin Li,
+												Chen Li,
+												Tian Lan,
+												Richong Zhang,
+												<u>Hao Peng</u>
+                                   
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent jianxin chuan me yangyang ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17c.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17c.pdf">Method and device for modifying compressed files</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Jianxin Li,
+												Chuan He,
+												<u>Hao Peng</u>,
+												Yangyang Zhang
+								
+	                                   
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent richong chen tian jianxin me ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17d.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17d.pdf">Real-time streaming text grading monitoring method and device</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                               	 Richong Zhang,
+												Chen Li,
+												Tian Lan,
+												Jianxin Li,												
+												<u>Hao Peng</u>                            
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent richong mengjiao pengyao me jianxin ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17e.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17e.pdf">Word vector generation method and device based on incremental learning</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Richong Zhang,
+												Mengjiao Bao,
+												Pengyao Liu,
+												<u>Hao Peng</u>,
+												Jianxin Li,							
+	                                   
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent chunming bo me richong jianxin ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17f.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17f.pdf">Semantic expansion-based microblog sudden event detection method and device</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+												Chunming Hu,
+												Bo Wu, 
+												<u>Hao Peng</u>,
+												Richong Zhang,
+			                                    Jianxin Li			
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2017 Patent jianxin pengyao  me hanteng richong ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent17g.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent17g.pdf">Word vector training method and device</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Jianxin Li,	
+												Pengyao Liu,
+												<u>Hao Peng</u>,
+												Hanteng Chen,
+											    Richong Zhang
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+					  </ul>
+						<!---------------------------------------->
+						<!---------------------------------------->
+						<h3>2016</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item journal publication 2016 CC me jianxin bo m.hassan">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[CC]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/cc16.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/cc16.pdf">Fast Multi-Pattern Matching Algorithm on Compressed Network Traffic</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                <u>Hao Peng</u>, 
+												Jianxin Li, 
+												Bo Li, 
+												M. Hassan Arif
+												
+                                                
+                                                </span><br> 
+                                                <span class="venueInfo"> China Communications (CC)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+                        <li class="list-group-item patent publication 2016 Patent jianxin jie zhe me  ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent16.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent16.pdf">Method and device for dynamically adjusting multi-mode matching automaton</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Jianxin Li,	
+												Jie Shen,
+												Zhe Liu,
+												<u>Hao Peng</u>
+
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+					  </ul>
+						<!---------------------------------------->
+						<!---------------------------------------->
+						<h3>2015</h3>
+                    <ul class="list-group">
+                        <!---------------------------------------->
+                        <li class="list-group-item patent publication 2015 Patent jianxin me nannan tian  ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent15a.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent15a.pdf">Method and device for detecting harmful codes based on HTTP compressed data stream</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Jianxin Li,	
+												<u>Hao Peng</u>,
+												Nannan Wu,
+												Tian Lan
+
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						 <!---------------------------------------->
+                        <li class="list-group-item patent publication 2015 Patent bo me peiyuan zhe ">
+                            <table style="width: 100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="abTab">
+                                            <div class="venueInfo">[PAT]</div>
+                                        </td>
+                                        <td class="imgTab">
+                                            <div><img src="figures/patent15b.jpg"></div>
+                                        </td>
+                                        <td class="pubTab">
+                                            <b>
+                                                <a href="papers/patent15b.pdf">Method and device for detecting harmful codes based on HTTP static compressed data stream</a>
+                                            </b>
+                                            <div>
+                                                <span class="authorInfo">
+                                                Bo Li,
+												<u>Hao Peng</u>,
+												Peiyuan Sun,
+												Zhe Liu
+
+												
+                                                </span><br> 
+                                                <span class="venueInfo"> National invention patent (PAT)</span><br>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+						<!---------------------------------------->
+					  </ul>
+						<!---------------------------------------->
+                    </ul>
+                    
+                </div>
+            </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tooltip-viewport.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+  
+</div>
+</div>
+</body>
+</html>
