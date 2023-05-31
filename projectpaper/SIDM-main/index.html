@@ -1,0 +1,169 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <style>
+            .video-container {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #404040;
+    /* padding: 0 25%; Adjust as needed */
+}
+.content-section {
+    padding: 0 25%; /* Add padding to content sections only */
+}
+h1 {
+    color: #800000;
+}
+h2 {
+    color: #404040;
+}
+table {
+    width: 100%;
+}
+td, th {
+    padding: 15px;
+    text-align: left;
+}
+/* Modify only the first column of the second table */
+#secondTable td:first-child, #secondTable th:first-child {
+    width: 5%; /* Adjust as needed */
+
+}
+#secondTable {
+    padding: 0 15%; /* Adjust as needed */
+}
+#secondTable td, #secondTable th {
+    border: 1px solid black; /* This will give a border to your table cells */
+    padding: 15px;
+    text-align: left;
+}
+hr {
+    border-top: 2px solid #4a3737;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+        </style>
+    </head>
+
+<body onload="init()">
+    <div id="main">
+        <div class="content-section">
+    <h1 style="text-align:center" >Effective and Efficient Reinforcement Learning Based on Structural Information Principles (SIDM)</h1>
+    <h2 style="text-align:center"> Submited IEEE TPAMI in 2023.5</h2>
+    <div id="authors">
+        <table>
+            <tr>
+                <td><a href="Xianghua_Zeng_link">Xianghua Zeng</a></td>
+                <td><a href="Hao_Peng_link">Hao Peng</a></td>
+                <td><a href="Dingli_Su_link">Dingli Su</a></td>
+                <td><a href="Angsheng_Li_link">Angsheng Li</a></td>
+            </tr>
+            <tr>
+                <td class="affiliation">School of Computer Science and Engineering, Beihang University</td>
+                <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                <td class="affiliation">School of Computer Science and Engineering, Beihang University</td>
+                <td class="affiliation">School of Computer Science, Beihang University</td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    <hr>
+<p>
+<b>TL;DR</b>&nbsp; We propose a new, unsupervised, and adaptive Decision-Making framework called SIDM for Reinforcement Learning. This approach handles high complexity environments without manual intervention, and increases sample efficiency and policy effectiveness.
+</p>
+<p>
+<a href="link_to_your_paper">Paper</a> | 
+<a href="https://github.com/RingBDStack/SIDM">Code</a>
+</p>
+
+
+<hr>
+<div id="abstract">
+<p>
+<b>Abstract</b>&nbsp; Reinforcement Learning (RL) algorithms often rely on specific hyperparameters to guarantee their performances, especially in highly complex environments. This paper proposes an unsupervised and adaptive Decision-Making framework called SIDM for RL, which uses action and state abstractions to address this issue. SIDM improves policy quality, stability, and sample efficiency by up to 18.75%, 88.26%, and 64.86%, respectively.
+</p>
+</div>
+
+<hr>
+<div id="approach">
+  <img src="./docs/framework.png" alt="Framework" style="display: block; max-width: 100%; margin: auto;">
+<p>
+<b>Approach</b>&nbsp; The SIDM framework includes structuralization, sparsification, optimization, and hierarchical abstraction modules. We construct homogeneous state and action graphs, minimize structural entropy to generate optimal encoding trees, and design an aggregation function for hierarchical state or action abstraction. Based on the hierarchical abstractions, we calculate tree node representations to achieve state abstraction in DRL, role discovery in MARL, and skill learning in HRL.
+</p>
+</div>
+
+<hr>
+<p>
+
+    <a name="videos"/>
+    <b>Videos</b>
+</div>
+    </p>
+    
+    <table id="secondTable">
+      <tr>
+        <th>Task</th>
+        <th>SISL</th>
+        <th>SAC</th>
+        <th>SE</th>
+        <th>HIRO</th>
+        <th>HSD</th>
+      </tr>
+      
+      <tr>
+        <td>Hurdles</td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SISL-hurdles-49.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SAC-hurdles-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SE-hurdles-80.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HIRO-hurdles-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HSD-hurdles-9.mp4" type="video/mp4"></video></td>
+      </tr> 
+ 
+      <tr> 
+        <td>Limbo</td> 
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SISL-limbo-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SAC-limbo-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SE-limbo-9.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HIRO-limbo-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HSD-limbo-0.mp4" type="video/mp4"></video></td>
+      </tr>
+      
+      <tr> 
+        <td>Pole
+            Balance</td> 
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SISL-pbalance-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SAC-pbalance-40.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/SE-pbalance-77.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HIRO-pbalance-123.mp4" type="video/mp4"></video></td>
+        <td class="video-container"><video width="320" height="240" controls autoplay muted><source src="./video/HSD-pbalance-8.mp4" type="video/mp4"></video></td>
+      </tr>
+      <!-- Additional rows as needed -->
+    </table>
+    
+    
+    
+    <hr>
+    </div>
+    </body>
+    
+</html>
