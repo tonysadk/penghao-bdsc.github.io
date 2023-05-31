@@ -1,1 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <style>
+        .video-container {
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #404040;
+            /* padding: 0 25%; Adjust as needed */
+        }
+
+        .content-section {
+            padding: 0 25%; /* Add padding to content sections only */
+        }
+
+        h1 {
+            color: #800000;
+        }
+
+        h2 {
+            color: #404040;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Modify only the first column of the second table */
+        #secondTable td:first-child, #secondTable th:first-child {
+            width: 5%; /* Adjust as needed */
+
+        }
+
+        #secondTable {
+            padding: 0 15%; /* Adjust as needed */
+        }
+
+        #secondTable td, #secondTable th {
+            border: 1px solid black; /* This will give a border to your table cells */
+            padding: 15px;
+            text-align: left;
+        }
+
+        hr {
+            border-top: 2px solid #4a3737;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .icon-huomiao {
+            color: #ec971f;
+        }
+
+    </style>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4097624_bym0lgqzi89.css">
+</head>
+
+<body onload="init()">
+<div id="main">
+    <div class="content-section">
+        <h1 style="text-align:center">Reinforced Neighborhood Selection Guided Multi-Relational Graph Neural
+            Networks</h1>
+        <h2 style="text-align:center"> ACM TOIS 2021 </h2>
+        <div id="authors">
+            <table>
+                <tr>
+                    <td><a href="https://penghao-bdsc.github.io/">Hao Peng</a></td>
+                    <td>Ruitong Zhang</td>
+                    <td><a href="https://ytongdou.com/">Yingtong Dou</a></td>
+                    <td><a href="https://yangrenyu.github.io/">Renyu Yang</a></td>
+                    <td>Jingyi Zhang</td>
+                    <td><a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a></td>
+                </tr>
+                <tr>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                    <td class="affiliation">School of Software, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <hr>
+        <p>
+            <b>TL;DR</b>&nbsp; We propose a new enhanced, recursive, and flexible neighborhood selection guided multi
+            graph neural network architecture, RioGNN, which navigates the complexity of the neural network structure
+            while maintaining relationship dependency representation. Progress has been made in terms of effectiveness,
+            efficiency, and model interpretability.
+        </p>
+        <p>
+            <a href="https://dl.acm.org/doi/full/10.1145/3490181">Paper</a> |
+            <a href="https://github.com/safe-graph/RioGNN">Code</a>
+        </p>
+
+
+        <hr>
+        <div id="abstract">
+            <p>
+                <b>Abstract</b>&nbsp; This paper proposes a multi relational graph neural network architecture called
+                RioGNN, which can handle multi relational and heterogeneous graphs while maintaining relational
+                correlation representations. This method uses label aware neural similarity measurement to select the
+                most similar neighbors, and uses an enhanced relationship aware neighbor selection mechanism to select
+                the most similar neighbors. A new recursive and scalable reinforcement learning framework is proposed to
+                improve neighbor selection efficiency. Comprehensive experiments have been conducted on real-world
+                graphical data and practical tasks to demonstrate the effectiveness, efficiency, and model
+                interpretability of this method.</p>
+            </p>
+        </div>
+
+        <hr>
+        <div id="RioGNN architecture">
+            <img src="./img/RioGNN architecture.png"
+                 alt="RioGNN architecture"
+                 style="display: block; max-width: 100%; margin: auto;">
+            <p>
+                <b>Approach</b>&nbsp;
+                The above image describes the overall architecture of RioGNN, including three key modules: label aware
+                similarity measurement, similarity aware neighbor selector, and relationship aware neighbor aggregator.
+                The label awareness similarity measurement module uses a fully connected network and linear
+                regularization. Each layer uses a fully connected network as a node label predictor, and uses the
+                distance between the prediction results of two nodes as a measure of intermediate similarity. At the
+                same time, a similarity aware neighbor selector was designed to filter out inappropriate behavior nodes,
+                avoiding errors caused by adversarial behavior or inaccurate feature extraction. The next step is to
+                aggregate neighbor information into the relationship, fully embed it, and use the optimal filtering
+                threshold learned during reinforcement learning as the aggregation weight of the mutual relationship,
+                which can reduce computational costs while retaining the importance information of the relationship.</p>
+        </div>
+        <hr>
+
+        <div id="Experiments">
+            <p>
+                <b>Experiments</b>&nbsp;
+                We compared it with traditional and latest GNN baselines in fraud detection.
+                The baselines are:GCN, GAT, Graph-SAGE, RGCN, GeniePath, Player2Vec, SemiGNN, GAS, FdGars, GraphConsis,
+                HAN, GCT, HSGNN, GraphNAS, Policy-GNN, CARE-GNN.
+                The results are shown in the following figure.
+            <p>Detection results of RioGNN and baselines:
+                <img src="./img/Compared to the Baselines.png" alt="Compared to the Baselines"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <hr>
+            We have also implemented many variants of the Rio GNN model, including Rio GNN<sub>2l</sub>, BIO GNN, ROO
+            GNN, ROO GNN, RIO Att, RIO Weight, RIO Mean.
+            The classification and clustering results are as follows:
+            <p>Detection Classification results of RioGNN and variants:
+                <img src="./img/Compared to RioGNN Variants.png" alt="Compared to RioGNN Variants"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Detection Clustering results of RioGNN and variants:
+                <img src="./img/Fraud Detection Clustering Results.png" alt="Fraud Detection Clustering Results"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <hr>
+            <b>Explainable RSRL Training Process:</b>&nbsp;
+            <p>The training scores and thresholds of RioGNN on Yelp and Amazon:
+                <img src="./img/The training scores and thresholds.png" alt="The training scores and thresholds"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>The training scores and thresholds of RioGNN variants on Yelp:
+                <img src="./img/The training scores and thresholds of RioGNN variants.png"
+                     alt="The training scores and thresholds of RioGNN variants"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Scores of Multi-Layer RioGNN on Yelp:
+                <img src="./img/Scores of Multi-Layer RioGNN.png"
+                     alt="Scores of Multi-Layer RioGNN"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <hr>
+            <b>Explainable Reinforcement Learning Training Process:</b>&nbsp;
+            <p>The training scores and thresholds of RioGNN vs BIO-GNN on MIMIC-III:
+                <img src="./img/The training scores and thresholds of RioGNN vs.png" alt="The training scores and thresholds of RioGNN vs"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+
+            </p>
+        </div>
+        <hr>
+        <div id="Conclusion">
+            <p>
+                <b>Conclusion</b>&nbsp;
+                This paper introduces a graph neural network architecture called RioGNN, aimed at learning more
+                discriminative node embeddings through enhanced neighborhood selection and providing explanations for
+                the importance of different relationships. We used reinforcement learning technology to design label
+                aware neural similarity neighbor metrics and reinforcement relationship aware neighbor selectors, while
+                also designing a recursive and scalable framework to optimize the computational efficiency of neighbor
+                selection. After experiments on three real-world benchmark datasets, it was found that RioGNN performed
+                better than state-of-the-art alternative methods on all datasets. The future goal is to adopt
+                multi-agent RL algorithm, further enabling RioGNN to adaptively identify meaningful relationships for
+                each node and extend it to graphic data analysis and other application tasks.
+            </p>
+        </div>
+        <hr>
+        <p>
+
+
+    </div>
+    </p>
+
+
+    <hr>
+</div>
+</body>
+
+</html>
 
