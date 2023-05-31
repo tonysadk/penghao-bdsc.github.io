@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <style>
+        .video-container {
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #404040;
+            /* padding: 0 25%; Adjust as needed */
+        }
+
+        .content-section {
+            padding: 0 25%; /* Add padding to content sections only */
+        }
+
+        h1 {
+            color: #800000;
+        }
+
+        h2 {
+            color: #404040;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Modify only the first column of the second table */
+        #secondTable td:first-child, #secondTable th:first-child {
+            width: 5%; /* Adjust as needed */
+
+        }
+
+        #secondTable {
+            padding: 0 15%; /* Adjust as needed */
+        }
+
+        #secondTable td, #secondTable th {
+            border: 1px solid black; /* This will give a border to your table cells */
+            padding: 15px;
+            text-align: left;
+        }
+
+        hr {
+            border-top: 2px solid #4a3737;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body onload="init()">
+<div id="main">
+    <div class="content-section">
+        <h1 style="text-align:center">Reinforced, Incremental and Cross-lingual Event Detection From Social
+            Messages</h1>
+        <h2 style="text-align:center"> IEEE TPAMI 2022 </h2>
+        <div id="authors">
+            <table>
+                <tr>
+                    <td><a href="Hao_Peng_link">Hao Peng</a></td>
+                    <td><a href="RuitongZhang_link">Ruitong Zhang</a></td>
+                    <td><a href="Shaoning Li_link">Shaoning Li</a></td>
+                    <td><a href="Yuwei Cao_link">Yuwei Cao</a></td>
+                    <td><a href="Shirui Pan_link">Shirui Pan</a></td>
+                    <td><a href="Philip S. Yu_link">Philip S. Yu</a></td>
+                </tr>
+                <tr>
+                    <td class="affiliation">School of Computer Science and Engineering, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                    <td class="affiliation">Department of Data Science and AI, Faculty of IT, Monash University</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <hr>
+        <p>
+            <b>TL;DR</b>&nbsp; We present a novel reinForced, incremental and cross-lingual social Event detection
+            architecture, namely FinEvent, from streaming social messages.
+            Secondly, we propose a new reinforced weighted multi-relational graph neural network framework by using a
+            Multi-agent Reinforcement Learning algorithm to select optimal aggregation thresholds across different
+            relations/edges to learn social message embeddings.
+            Thirdly, a new Deep Reinforcement Learning guided density-based spatial clustering model is designed to
+            select the optimal minimum number of samples required to form a cluster and optimal minimum distance between
+            two clusters in social event detection tasks.
+            Finally, we implement incremental social message representation learning based on knowledge preservation on
+            the graph neural network and achieve the transferring cross-lingual social event detection.
+        </p>
+        <p>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9693189">Paper</a>
+        </p>
+
+
+        <hr>
+        <div id="abstract">
+            <p>
+                <b>Abstract</b>&nbsp; Detecting hot social events (e.g. political scandal, momentous meetings, natural
+                hazards, etc.) from social messages is crucial as it highlights significant happenings to help people
+                understand the real world. On account of the streaming nature of social messages, incremental social
+                event detection models in acquiring, preserving, and updating messages over time have attracted great
+                attention. However, the challenge is that the existing event detection methods towards streaming social
+                messages are generally confronted with ambiguous events features, dispersive text contents, and multiple
+                languages, and hence result in low accuracy and generalization ability. In this paper, we present a
+                novel reinForced, incremental and cross-lingual social Event detection architecture, namely FinEvent,
+                from streaming social messages. Concretely, we first model social messages into heterogeneous graphs
+                integrating both rich meta-semantics and diverse meta-relations, and convert them to weighted
+                multi-relational message graphs. Secondly, we propose a new reinforced weighted multi-relational graph
+                neural network framework by using a Multi-agent Reinforcement Learning algorithm to select optimal
+                aggregation thresholds across different relations/edges to learn social message embeddings. To solve the
+                long-tail problem in social event detection, a balanced sampling strategy guided Contrastive Learning
+                mechanism is designed for incremental social message representation learning. Thirdly, a new Deep
+                Reinforcement Learning guided density-based spatial clustering model is designed to select the optimal
+                minimum number of samples required to form a cluster and optimal minimum distance between two clusters
+                in social event detection tasks. Finally, we implement incremental social message representation
+                learning based on knowledge preservation on the graph neural network and achieve the transferring
+                cross-lingual social event detection. We conduct extensive experiments to evaluate the FinEvent on
+                Twitter streams, demonstrating a significant and consistent improvement in model quality with 14%-118%,
+                8%-170%, and 2%-21% increases in performance on offline, online, and cross-lingual social event
+                detection tasks.</p>
+            </p>
+        </div>
+
+        <hr>
+        <div id="Incremental life-cycle and cross-lingual transferring mechanisms in FinEvent architecture.">
+            <img src="./img/Incremental life-cycle and cross-lingual transferring mechanisms in FinEvent architecture..png"
+                 alt="Incremental life-cycle and cross-lingual transferring mechanisms in FinEvent architecture."
+                 style="display: block; max-width: 100%; margin: auto;">
+            <p>
+                <b>Incremental life-cycle and cross-lingual transferring mechanisms in FinEvent architecture</b>&nbsp;
+                The above figure shows the incremental lifecycle and cross language transmission mechanism in the
+                FinEvent architecture.
+                FinEvent performs social event detection in an incremental life-cycle mechanism. The design of FinEvent
+                architecture aims at being consistent with the streaming nature of social messages and real situations
+                in event detection. Concretely, we require a flexible architecture to i). deal with the streaming nature
+                of social messages in an online manner; ii). continuously acquire, preserve and extend the message
+                semantics; iii). handle the actual problems, especially the cross-lingual event detection task. In
+                addition, FinEvent is also capable of realizing cross-lingual transfer.
+
+            </p>
+        </div>
+        <hr>
+        <div id="FinEvent architecture">
+            <img src="./img/FinEvent architecture.png" alt="FinEvent architecture"
+                 style="display: block; max-width: 100%; margin: auto;">
+            <p>
+                <b>FinEvent architecture</b>&nbsp;
+                FinEvent can realize offline, online, and cross-lingual social event detection by utilizing both social
+                messages representation learning framework MarGNN, cross-lingual social message representation learning
+                method Crlme, and social event clustering detection model DRLDBSCAN.
+                The above figure shows the proposed framework FinEvent with five important modules. For the original
+                social messages, we first convert them into a weighted multi-relational graph. Then we use multi-agent
+                reinforcement learning to select neighbors for different relations, and obtain the aggregation of all
+                messages through the weighted multirelational graph neural network . In order to balance sampling and
+                cope with incremental detection scenarios, a strategy-based contrast learning mechanism is used to train
+                the GNN. Finally, we use the DBSCAN model guided by deep reinforcement learning for event clustering
+                parameter debugging.
+
+            </p>
+        </div>
+        <hr>
+        <div id="Experiments">
+            <p>
+                <b>Experiments</b>&nbsp;
+                We conducted experiments on a Twitter dataset collected by a Twitter API.
+                The baselines are: Word2vec,&nbsp;LDA,&nbsp;WMD,&nbsp;BERT,&nbsp;BiLSTM,&nbsp;PP-GCN,&nbsp;EventX.
+                We first compare FinEvent to different baselines including offline as well as incremental social event
+                detection models.
+                The specific results are as follows.
+            <p>Offline evaluation:
+                <img src="./img/Offline evaluation.png" alt="Offline evaluation"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Incremental evaluation:
+                <img src="./img/Incremental evaluation.png" alt="Incremental evaluation"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Cross-lingual transferring evaluation:
+                <img src="./img/Cross-lingual transferring evaluation.png" alt="Cross-lingual transferring evaluation"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            </p>
+        </div>
+        <hr>
+        <div id="Conclusion">
+            <p>
+                <b>Conclusion</b>&nbsp;
+                This article introduces a social event detection architecture based on streaming social messages,
+                FinEvent, and proposes a multi-agent reinforcement learning guided multi graph neural network framework,
+                MarGNN, and a density space clustering model based on deep reinforcement learning, DRL-DBSCAN, to
+                improve the performance of FinEvent. The experimental results indicate that FinEvent has achieved
+                significant and consistent improvements in offline, online, and cross language social event detection
+                tasks. In the future, researchers plan to extend multi-agent RL guided GNN to other graph data
+                representations and their application fields.
+            </p>
+        </div>
+        <hr>
+        <p>
+
+
+    </div>
+    </p>
+
+
+    <hr>
+</div>
+</body>
+
+</html>
