@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <style>
+        .video-container {
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #404040;
+            /* padding: 0 25%; Adjust as needed */
+        }
+
+        .content-section {
+            padding: 0 25%; /* Add padding to content sections only */
+        }
+
+        h1 {
+            color: #800000;
+        }
+
+        h2 {
+            color: #404040;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Modify only the first column of the second table */
+        #secondTable td:first-child, #secondTable th:first-child {
+            width: 5%; /* Adjust as needed */
+
+        }
+
+        #secondTable {
+            padding: 0 15%; /* Adjust as needed */
+        }
+
+        #secondTable td, #secondTable th {
+            border: 1px solid black; /* This will give a border to your table cells */
+            padding: 15px;
+            text-align: left;
+        }
+
+        hr {
+            border-top: 2px solid #4a3737;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .icon-huomiao {
+            color: #ec971f;
+        }
+
+    </style>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4097624_bym0lgqzi89.css">
+</head>
+
+<body onload="init()">
+<div id="main">
+    <div class="content-section">
+        <h1 style="text-align:center">Adaptive and Robust DBSCAN with Multi-agent Reinforcement Learning</h1>
+        <h2 style="text-align:center"> IEEE TPAMI 2023 </h2>
+        <div id="authors">
+            <table>
+                <tr>
+                    <td><a href="https://penghao-bdsc.github.io/">Hao Peng</a></td>
+                    <td>Xiang Huang</td>
+                    <td>Shuo Sun</td>
+                    <td>Ruitong Zhang</td>
+                    <td>Xizhao Wang</td>
+                    <td><a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a></td>
+                </tr>
+                <tr>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation"> College of Computer Science and Software Engineering, Shenzhen University</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <hr>
+        <p>
+            <b>TL;DR</b>&nbsp; This paper proposes a new adaptive robust DBSCAN clustering framework based on multi-agent reinforcement learning, namely AR-DBSCAN, which does not need to define hyperparameter in advance. This framework achieves adaptive robust clustering for datasets with different densities.
+        </p>
+        <p>
+            <a href="--">Paper</a> |
+            <a href="https://github.com/RingBDStack/AR-DBSCAN">Code</a>
+        </p>
+
+
+        <hr>
+        <div id="abstract">
+            <p>
+                <b>Abstract</b>&nbsp; This article proposes a new adaptive robust DBSCAN clustering framework based on multi-agent reinforcement learning, namely AR-DBSCAN. The framework uses two-level coding trees to divide data into different density regions, and uses agents to adaptively process data with different density distributions. At the same time, multi-agent deep reinforcement learning is utilized to automatically search for the best clustering parameters, and efficient and controllable exploration is achieved through a recursive search mechanism that adapts to the size of the data. The experimental results show that the clustering accuracy of AR-DBSCAN has been significantly improved and has robustness.</p>
+            </p>
+        </div>
+
+        <hr>
+        <div id="AR-DBSCAN">
+            <img src="./img/AR-DBSCAN.png"
+                 alt="AR-DBSCAN"
+                 style="display: block; max-width: 100%; margin: auto;">
+            <p>
+                <b>Approach</b>&nbsp;
+                The above image describes the overall framework of AR-DBSCAN.AR-DBSCAN is an improved DBSCAN algorithm that includes three steps: structuring, agent allocation, and parameter search. Firstly, in the structured step, the original dataset is transformed into a structured k-NN graph G to capture neighborhood structure information. Next, an optimized two-level encoding tree is generated based on the minimization of two-dimensional structural entropy, and the dataset is divided using proxy allocation method based on the information uncertainty distribution of the encoding tree. Each partition is assigned a corresponding proxy. Finally, in each agent and corresponding data partition, a separation parameter search process based on deep reinforcement learning is applied to find the optimal parameter combination. In order to improve search efficiency, a recursive mechanism was adopted.</div>
+        <hr>
+
+        <div id="Experiments">
+            <p>
+                <b>Experiments</b>&nbsp;
+                We compared AR-DBSCAN with traditional optimization algorithms and existing DBSCAN parameter search methods.
+                The baselines are:Rand, BO-TPE, Anneal, PSO, GA, DE, KDist, BDE.
+                The results are shown in the following figure.
+            <br><br>
+                <b>Offline Evaluation:</b>&nbsp;
+            <p>Offline evaluation of NMI performance:
+                <img src="./img/Offline evaluation of NMI performance.png" alt="Offline evaluation of NMI performance"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <hr>
+            <p>Offline evaluation of ARI performance:
+                <img src="./img/Offline evaluation of ARI performance.png" alt="Offline evaluation of ARI performance"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p> Offline clustering efficiency comparison:
+                <img src="./img/Offline clustering efficiency comparison.png" alt=" Offline clustering efficiency comparison"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <hr>
+            <b>Online Evaluation:</b>&nbsp;
+            <p> Online evaluation of NMI performance:
+                <img src="./img/Online evaluation of NMI performance.png" alt=" Online evaluation of NMI performance"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Online evaluation of ARI performance:
+                <img src="./img/Online evaluation of ARI performance.png"
+                     alt="Online evaluation of ARI performance"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+
+
+
+        </div>
+        <hr>
+        <div id="Conclusion">
+            <p>
+                <b>Conclusion</b>&nbsp;
+                This paper proposes an adaptive robust DBSCAN algorithm based on multi-agent reinforcement learning, called AR-DBSCAN. The algorithm is divided into two parts: an intelligent agent allocation method based on clustering density and a parameter search method based on deep reinforcement learning. The intelligent agent allocation method pre partitions data based on clustering density to alleviate parameter search problems in clustering with different densities. The parameter search method is applied to each agent, perceiving the clustering environment through weak supervision and attention mechanisms, and searching for the optimal parameters. The recursive search mechanism avoids the degradation of search performance caused by excessive parameter space. The experimental results show that the algorithm has high accuracy, efficiency, and stability. In future work, other concepts of interaction between multi-agent systems will be explored to avoid the impact of misclassification on agent allocation. </p>
+        </div>
+        <hr>
+
+
+        <p>
+
+
+    </div>
+    </p>
+
+
+    <hr>
+</div>
+</body>
+
+</html>
