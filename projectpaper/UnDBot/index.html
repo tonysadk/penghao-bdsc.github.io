@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <style>
+        .video-container {
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #404040;
+            /* padding: 0 25%; Adjust as needed */
+        }
+
+        .content-section {
+            padding: 0 25%; /* Add padding to content sections only */
+        }
+
+        h1 {
+            color: #800000;
+        }
+
+        h2 {
+            color: #404040;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Modify only the first column of the second table */
+        #secondTable td:first-child, #secondTable th:first-child {
+            width: 5%; /* Adjust as needed */
+
+        }
+
+        #secondTable {
+            padding: 0 15%; /* Adjust as needed */
+        }
+
+        #secondTable td, #secondTable th {
+            border: 1px solid black; /* This will give a border to your table cells */
+            padding: 15px;
+            text-align: left;
+        }
+
+        hr {
+            border-top: 2px solid #4a3737;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body onload="init()">
+<div id="main">
+    <div class="content-section">
+        <h1 style="text-align:center">Unsupervised Social Bot Detection via Structural Information Theory</h1>
+        <h2 style="text-align:center"> Submited ACM in 2023.8 </h2>
+        <div id="authors">
+            <table>
+                <tr>
+                    <td><a href="https://penghao-bdsc.github.io/">Hao Peng</a></td>
+                    <td>JINGYUN ZHANG</td>
+                    <td>XIANG HUANG</td>
+                    <td>ZHIFENG HAO</td>
+                    <td>ANGSHENG LI</td>
+                    <td>ZHENGTAO YU</td>
+                    <td><a href="https://cs.uic.edu/profiles/philip-yu/">Philip S. Yu</a></td>
+                </tr>
+                <tr>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">School of Cyber Science and Technology, Beihang University</td>
+                    <td class="affiliation">College of Science, University of Shantou</td>
+                    <td class="affiliation">School of Computer Science and Engineering, Beihang University</td>
+                    <td class="affiliation">Kunming University of Science and Technology</td>
+                    <td class="affiliation">Department of Computer Science, University of Illinois at Chicago</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <hr>
+        <p>
+            <b>TL;DR</b>&nbsp;
+            An unsupervised and interpretable social bot detection framework is proposed with high accuracy that decodes the significant structural features of the network using structural information theory.
+
+        </p>
+        <p>
+            <a href="link_your_paper">Paper</a> |
+            <a href="https://github.com/SELGroup/UnDBot">Code</a>
+        </p>
+
+
+        <hr>
+        <div id="abstract">
+            <p>
+                <b>Abstract</b>&nbsp;
+                UnDBot offers an unsupervised, interpretable, and practical solution based on structural information theory. Our framework optimizes heterogeneous structural entropy by aggregating edge information from the multi-relational graph, resulting in a two-dimensional encoding tree. We also introduce a community labeling technique that identifies bot communities by analyzing user contributions to network structure and community engagement.
+            </p>
+        </div>
+
+
+        <hr>
+        <div id="UnDBot architecture">
+            <img src="./img/UnDBot.png" alt="UnDBot"
+                 style="display: block; max-width: 100%; margin: auto;">
+            <p>
+                <b>UnDBot architecture</b>&nbsp;
+                UnDBot consists of three key modules: multi graph construction, user community partitioning, and community binary classification. (1) Multiple relationship graph construction. Firstly, based on the similarity of behavioral characteristics, social users are constructed into a multi relationship graph.
+                (2) User Community Department. After the construction process of the graph, an optimal two-dimensional encoding tree was created based on the principle of minimizing structural entropy. In addition, social users are assigned to different subtrees on the encoding tree, resulting in community partitioning.
+                (3) Community binary classification. For each community, use stationary distribution and community entropy to quantify community impact and cohesion, and then apply them to binary classification. The architecture diagram of the model is shown above.
+
+
+            </p>
+        </div>
+        <hr>
+        <div id="Experiments">
+            <p>
+                <b>Experiments</b>&nbsp;
+                We employ four publicly available social user datasets to assess the performance of the models in the context of social bot detection. The baselines are: K-means ,DNA ,DeepWalk ,LINE ,Node2vec ,SDNE ,GraRep  ,DNGR ,HOPE ,GAE. We have generated several variants of the complete UnDBot model: UnDBot-FT ,UnDBot-FI ,UnDBot-TI ,UnDBot-G.
+            <p>Comparison of the  across different methods for social bot detection:
+                <img src="./img/Comparison.png" alt="Comparison"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <p>Distribution of user embeddings generated by unsupervised graph learning models on the Cresci-2015 and Cresci-2017 datasets:
+                <img src="./img/Cresci-2015 and Cresci-2017.png" alt="Cresci-2015 and Cresci-2017"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+            <p>Distribution of user embeddings generated by unsupervised graph learning models on the Botwiki-2019 and Pronbots2019 datasets:
+                <img src="./img/Botwiki-2019 and Pronbots2019.png" alt="Botwiki-2019 and Pronbots2019"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+
+            <p>Comparison with the ACC,Precision,Recall, F1 and the number of communities of different variations on Cresci-2015 dataset:
+                <img src="./img/Cresci-2015.png" alt="Cresci-2015"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+
+            <p>Comparison with the ACC,Precision,Recall, F1 and the number of communities of different variations on Cresci-2017 dataset:
+                <img src="./img/Cresci-2017.png" alt="Cresci-2017"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+
+            <p>Comparison with the ACC,Precision,Recall, F1 and the number of communities of different variations on Pronbots-2019 dataset:
+                <img src="./img/Pronbots-2019.png" alt="Pronbots-2019"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+
+            <p>Comparison with the ACC,Precision,Recall, F1 and the number of communities of different variations on Botwiki-2019 dataset:
+                <img src="./img/Botwiki-2019.png" alt="Botwiki-2019"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+            <br>
+
+            <p>Average time per run for UnDBot and all baselines:
+                <img src="./img/Average time.png" alt="Average time"
+                     style="display: block; max-width: 100%; margin: auto;">
+            </p>
+
+            </p>
+        </div>
+        <hr>
+        <div id="Conclusion">
+            <p>
+                <b>Conclusion</b>&nbsp;
+                This paper investigates a framework for supporting the unsupervised detection of social bots. The proposed UnDBot framework adaptively performs hierarchical community partitioning and identifies social bot communities during social bot detection. By modeling social user networks based on social behavior similarity, we effectively enhance the connections between social bots. The parallel execution of fusion operators during community partitioning maintains a stable community structure while ensuring high operational efficiency.Experimental results demonstrate that UnDBot outperforms all unsupervised models in terms of accuracy, achieving a balance between operational efficiency and performance while exhibiting strong interpretability.
+
+            </p>
+        </div>
+        <hr>
+        <p>
+
+
+    </div>
+    </p>
+
+
+    <hr>
+</div>
+</body>
+
+</html>
