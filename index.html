@@ -19,7 +19,20 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
+<style>
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: orange; }
+            100% { color: red; }
+        }
 
+        .dynamic-text {
+            font-size: 24px;
+            animation: colorChange 5s linear infinite;
+        }
+    </style>
    
   </head>
 
@@ -68,6 +81,9 @@
             Email: penghao@buaa.edu.cn<br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;penghcs@gmail.com
 	  </div>
+	  <div style="background: #1E9FFF;padding-bottom:10px; padding-top:35px;border-radius: 10px;">
+                <p class="dynamic-text">常年欢迎优秀本科生与硕士生报考研究生</p>
+            </div>
   </div>
   <div class="col-xs-12 col-md-8" itemprop="description">
 
